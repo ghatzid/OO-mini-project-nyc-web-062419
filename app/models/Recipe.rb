@@ -43,26 +43,11 @@ class Recipe
   end
 
   #should return all of the Ingredients in this recipe that are allergens for Users in our system.
-  def allergens
-    temp_list = []
-    allergenlist = []
-    RecipeCard.all.select do |recipe_card|
-      if recipe_card.recipe == self
-        temp_list << recipe_card.user #array containing all users of this recipe
-      end
-      i = 0
-      while i < temp_list.length
-        Allergy.all.select do |allergy_instance|
-          temp_list[i] == allergy_instance.user
-          allergenlist << allergy_instance.ingredient
-          i += 1
-        end
-      end
+    def allergens
+        array1 = self.ingredients.map {|ing| ing.name}
+        array2 = Allergy.all.map {|x| x.ingredient.name}
+        array1 & array2
     end
-    #return temp_list
-
-    allergenlist
-  end
 
   #should take an array of ingredient instances as an argument, and associate each of those ingredients with this recipe
   def add_ingredients
