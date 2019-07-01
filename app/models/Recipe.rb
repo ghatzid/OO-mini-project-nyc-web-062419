@@ -14,22 +14,16 @@ class Recipe
     def self.all
         @@all
     end
-
+    
     #should return the recipe instance with the highest number of users (the recipe that has the most recipe cards)
     def self.most_popular
-        # RecipeCard.all.map do |key|
-        #     key.map do |key, val|
-        #         puts key
-        #         puts val
-        #     end
-        # end
     end
 
     #should return the user instances who have recipe cards with this recipe
     def users
 
 
-        
+
 # userlist = []
 
 #         RecipeCard.all.select do |recipe_card|

@@ -34,6 +34,9 @@ allergy3 = Allergy.new(user3,ingredient3)
 
 
 
+RecipeCard.all.map do |card|
+    puts card
+end
 
 
 

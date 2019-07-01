@@ -19,22 +19,22 @@ class RecipeCard
     end
 
     #should return the date of the entry
-    def date
-        self.date
-    end
+    # def date
+    #     @date
+    # end
     
-    #should return the rating (an integer) a user has given their entry
-    def rating
-        self.rating
-    end
+    # #should return the rating (an integer) a user has given their entry
+    # def rating
+    #     self.rating
+    # end
 
-    #should return the user to which the entry belongs
-    def user
-        self.user
-    end
+    # #should return the user to which the entry belongs
+    # def user
+    #     self.user
+    # end
     
-    #should return the recipe to which the entry belongs
-    def recipe
-        self.recipe
-    end
+    # #should return the recipe to which the entry belongs
+    # def recipe
+    #     self.recipe
+    # end
 end
