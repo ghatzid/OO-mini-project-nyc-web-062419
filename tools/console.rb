@@ -31,6 +31,7 @@ recipecard2 = RecipeCard.new(recipe2, user2, 8302, 3.5)
 recipecard3 = RecipeCard.new(recipe3, user3, 3242, 2.1)
 recipecard4 = RecipeCard.new(recipe3, user1, 3456, 4.6)
 recipecard5 = RecipeCard.new(recipe2, user1, 5651, 1.2)
+recipecard6 = RecipeCard.new(recipe2, user1, 9991, 1.2)
 
 # Allergy(user, ingredient)
 allergy1 = Allergy.new(user1, ingredient4)
