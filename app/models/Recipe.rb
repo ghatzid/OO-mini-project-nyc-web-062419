@@ -45,13 +45,18 @@ class Recipe
   end
 
   #should return all of the Ingredients in this recipe that are allergens for Users in our system.
-    def allergens
-        array1 = self.ingredients.map {|ing| ing.name}
-        array2 = Allergy.all.map {|x| x.ingredient.name}
-        array1 & array2
-    end
+  def allergens
+    array1 = self.ingredients.map { |ing| ing.name }
+    array2 = Allergy.all.map { |x| x.ingredient.name }
+    array1 & array2
+  end
 
   #should take an array of ingredient instances as an argument, and associate each of those ingredients with this recipe
-  def add_ingredients
+  def add_ingredients(ingredient_array)
+    i = 0
+    while i < ingredient_array.length
+      RecipeIngredient.new(self, ingredient_array[i])
+      i += 1
+    end
   end
 end

@@ -35,8 +35,8 @@ class User
 
   #should return all of the ingredients this user is allergic to
   def allergens
-    Allergy.all.map do |x| 
-      if x.user.name == self.name 
+    Allergy.all.map do |x|
+      if x.user.name == self.name
         x.ingredient.name
       end
     end
