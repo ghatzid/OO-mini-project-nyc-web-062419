@@ -44,13 +44,15 @@ class User
 
   #should return the top three highest rated recipes for this user.
   def top_three_recipes
-    top_three = RecipeCard.all.select {|atr| atr.user.name == "Bob"}
+    top_three = RecipeCard.all.select {|atr| atr.user == self}
     top_three.sort_by {|atr| atr.rating}.reverse
     top_three[0..2]
   end
 
   # User#most_recent_recipe should return the recipe most recently added to the user's cookbook.
   def most_recent_recipe
+    most_recent_recipe = RecipeCard.all.select {|atr| atr.user.name == self.name}
+    most_recent_recipe.sort_by {|atr| atr.date}.reverse[0]
   end
 
   #BONUS
