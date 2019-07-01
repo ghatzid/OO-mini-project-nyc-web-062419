@@ -51,14 +51,8 @@ class User
 
   # User#most_recent_recipe should return the recipe most recently added to the user's cookbook.
   def most_recent_recipe
-    most_recent = RecipeCard.all.select do |atr|
-      atr.user == self
-    end
-
-    most_recent.sort_by do |atr|
-      atr.date
-    end
-    most_recent
+    most_recent_recipe = RecipeCard.all.select { |atr| atr.user.name == self.name }
+    most_recent_recipe.sort_by { |atr| atr.date }.reverse[0]
   end
 
   #BONUS
