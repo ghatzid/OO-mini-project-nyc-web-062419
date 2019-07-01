@@ -35,9 +35,9 @@ recipecard4 = RecipeCard.new(recipe3, user1, 3456)
 allergy1 = Allergy.new(user1, ingredient4)
 allergy2 = Allergy.new(user2, ingredient5)
 
-RecipeCard.all.map do |card|
-  puts card
-end
+# RecipeCard.all.map do |card|
+#   puts card
+# end
 
 ##
 binding.pry
