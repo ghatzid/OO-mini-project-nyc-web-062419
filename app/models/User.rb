@@ -35,10 +35,18 @@ class User
 
   #should return all of the ingredients this user is allergic to
   def allergens
+    Allergy.all.map do |x| 
+      if x.user.name == self.name 
+        x.ingredient.name
+      end
+    end
   end
 
   #should return the top three highest rated recipes for this user.
   def top_three_recipes
+    top_three = RecipeCard.all.select {|atr| atr.user.name == "Bob"}
+    top_three.sort_by {|atr| atr.rating}.reverse
+    top_three[0..2]
   end
 
   # User#most_recent_recipe should return the recipe most recently added to the user's cookbook.

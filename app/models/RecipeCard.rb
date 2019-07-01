@@ -6,10 +6,10 @@ class RecipeCard
   attr_writer
   @@all = []
 
-  def initialize(recipe, user, date, rating = 0)
+  def initialize(recipe, user, date, rating = 0.0)
     @recipe = recipe
     @user = user
-    @rating = 0.0
+    @rating = rating
     @date = date
     @@all.push(self)
   end
